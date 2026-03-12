@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Как приручить дракона: Викторина</title>
+<meta name="description" content="Детская викторина по книгам Крессиды Коуэлл «Как приручить дракона». Три уровня сложности для детей 3-7 лет.">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#e8943a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Викторина">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=chillax@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game">
+
+  <!-- ===== Title Screen ===== -->
+  <div id="title-screen" class="screen title-screen active" style="background-image: url('assets/title-bg.jpg');">
+    <div class="title-content">
+      <!-- Animated Dragon SVG Logo -->
+      <svg class="dragon-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Дракон">
+        <ellipse cx="50" cy="58" rx="22" ry="18" fill="#4a7c59"/>
+        <ellipse cx="50" cy="62" rx="14" ry="10" fill="#8bc48a"/>
+        <circle cx="50" cy="36" r="16" fill="#4a7c59"/>
+        <ellipse cx="44" cy="33" rx="4" ry="4.5" fill="white"/>
+        <ellipse cx="56" cy="33" rx="4" ry="4.5" fill="white"/>
+        <circle cx="45" cy="33" r="2.5" fill="#2d1b0e"/>
+        <circle cx="57" cy="33" r="2.5" fill="#2d1b0e"/>
+        <circle cx="46" cy="32" r="1" fill="white"/>
+        <circle cx="58" cy="32" r="1" fill="white"/>
+        <circle cx="47" cy="41" r="1.5" fill="#3a6347"/>
+        <circle cx="53" cy="41" r="1.5" fill="#3a6347"/>
+        <path d="M44 44 Q50 49 56 44" stroke="#3a6347" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M38 24 L33 12 L40 22" fill="#e8943a"/>
+        <path d="M62 24 L67 12 L60 22" fill="#e8943a"/>
+        <path d="M28 52 Q15 35 22 28 Q25 35 28 42 Q26 38 30 32 Q30 40 32 48 Z" fill="#5e9a70"/>
+        <path d="M72 52 Q85 35 78 28 Q75 35 72 42 Q74 38 70 32 Q70 40 68 48 Z" fill="#5e9a70"/>
+        <ellipse cx="38" cy="74" rx="6" ry="4" fill="#3a6347"/>
+        <ellipse cx="62" cy="74" rx="6" ry="4" fill="#3a6347"/>
+        <path d="M72 62 Q82 65 88 58 Q85 62 90 56" stroke="#4a7c59" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M88 54 L94 50 L90 58 Z" fill="#e8943a"/>
+        <circle cx="50" cy="20" r="2" fill="#e8943a"/>
+        <circle cx="50" cy="46" r="1.5" fill="#e8943a"/>
+        <circle cx="50" cy="50" r="1.5" fill="#e8943a"/>
+      </svg>
+
+      <h1 class="title-heading">Как приручить дракона</h1>
+      <p class="title-subtitle">Викторина</p>
+
+      <div class="difficulty-buttons">
+        <button class="btn-difficulty btn-easy" onclick="selectDifficulty('easy')">
+          <span class="btn-icon">🐲</span>
+          <span class="btn-text">
+            <span class="btn-label">Дракончик</span>
+            <span class="btn-age">для малышей 3-4</span>
+          </span>
+        </button>
+        <button class="btn-difficulty btn-medium" onclick="selectDifficulty('medium')">
+          <span class="btn-icon">⚔️</span>
+          <span class="btn-text">
+            <span class="btn-label">Викинг</span>
+            <span class="btn-age">для детей 5-6</span>
+          </span>
+        </button>
+        <button class="btn-difficulty btn-hard" onclick="selectDifficulty('hard')">
+          <span class="btn-icon">👑</span>
+          <span class="btn-text">
+            <span class="btn-label">Вождь</span>
+            <span class="btn-age">для детей 7+</span>
+          </span>
+        </button>
+      </div>
+
+      <button class="btn-leaderboard-title" onclick="showLeaderboard()">
+        🏆 Таблица лидеров
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== Name Entry Screen ===== -->
+  <div id="name-screen" class="screen name-screen">
+    <div class="name-card">
+      <div class="name-dragon">🐲</div>
+      <h2 class="name-heading">Как тебя зовут?</h2>
+      <p class="name-subtitle">Уровень: <span id="name-difficulty-label"></span></p>
+      <div class="name-input-wrap">
+        <input
+          type="text"
+          id="player-name-input"
+          class="player-name-input"
+          placeholder="Введи своё имя"
+          maxlength="20"
+          autocomplete="off"
+        >
+      </div>
+      <button class="btn-start-game" onclick="startGameFromName()">
+        🚀 Начать игру!
+      </button>
+      <button class="btn-back-to-title" onclick="goToTitle()">
+        ← Назад
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== Question Screen ===== -->
+  <div id="question-screen" class="screen question-screen">
+    <div class="progress-bar-container">
+      <div class="progress-info">
+        <span>Вопрос <span id="progress-current">1</span> из <span id="progress-total">5</span></span>
+        <span id="difficulty-label"></span>
+      </div>
+      <div class="progress-track">
+        <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div id="timer-container" class="timer-container">
+      <div class="timer-icon">⏱️</div>
+      <div class="timer-bar-track">
+        <div id="timer-bar" class="timer-bar" style="width: 100%"></div>
+      </div>
+      <div class="timer-value-wrap">
+        <span id="timer-value" class="timer-value">30</span>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <p id="question-text" class="question-text"></p>
+      <img id="question-image" class="question-image" src="" alt="" style="display: none;">
+      <div id="feedback" class="feedback"></div>
+      <div id="answers-text" class="answers-text"></div>
+      <div id="answers-images" class="answers-images"></div>
+    </div>
+
+    <!-- Player name in corner -->
+    <div class="player-tag">
+      <span id="player-label"></span>
+    </div>
+  </div>
+
+  <!-- ===== Results Screen ===== -->
+  <div id="results-screen" class="screen results-screen">
+    <div class="results-card">
+      <div id="results-dragon" class="results-dragon">🐲</div>
+      <h2 id="results-title" class="results-title">Результаты</h2>
+      <p id="results-player-name" class="results-player-name"></p>
+      <p id="results-score" class="results-score"></p>
+      <p id="results-time" class="results-time"></p>
+      <div id="stars-container" class="stars-container"></div>
+      <p id="results-message" class="results-message"></p>
+      <div class="results-buttons">
+        <button class="btn-play-again" onclick="goToTitle()">
+          🔄 Играть снова
+        </button>
+        <button class="btn-show-leaderboard" onclick="showLeaderboardFromResults()">
+          🏆 Лидеры
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Leaderboard Screen ===== -->
+  <div id="leaderboard-screen" class="screen leaderboard-screen">
+    <div class="leaderboard-card">
+      <h2 class="lb-title">🏆 Таблица лидеров</h2>
+
+      <div class="lb-filters">
+        <button class="lb-filter-btn active" data-filter="all" onclick="filterLeaderboard('all')">Все</button>
+        <button class="lb-filter-btn" data-filter="easy" onclick="filterLeaderboard('easy')">🐲</button>
+        <button class="lb-filter-btn" data-filter="medium" onclick="filterLeaderboard('medium')">⚔️</button>
+        <button class="lb-filter-btn" data-filter="hard" onclick="filterLeaderboard('hard')">👑</button>
+      </div>
+
+      <div class="lb-header">
+        <span class="lb-header-rank">#</span>
+        <span class="lb-header-name">Имя</span>
+        <span class="lb-header-stats">Результат</span>
+      </div>
+
+      <div id="leaderboard-list" class="leaderboard-list"></div>
+      <p id="leaderboard-empty" class="lb-empty" style="display: none;">
+        Пока никто не играл. Будь первым! 🐉
+      </p>
+
+      <button class="btn-back-from-lb" onclick="goToTitle()">
+        ← На главную
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="game-footer">
+  <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+</footer>
+
+<!-- Scripts -->
+<script src="questions.js"></script>
+<script src="app.js"></script>
+
+<!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').then(reg => {
+      console.log('SW registered:', reg.scope);
+    }).catch(err => {
+      console.log('SW registration failed:', err);
+    });
+  });
+}
+</script>
+
+</body>
+</html>
