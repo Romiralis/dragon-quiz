@@ -107,9 +107,10 @@ async function loadLeaderboard() {
       const data = await res.json();
       if (data) {
         leaderboard = Object.entries(data).map(([id, entry]) => ({ ...entry, id }));
-        // Sort: most correct first, then least time
+        // Sort: most correct first, then fewest attempts, then least time
         leaderboard.sort((a, b) => {
           if (b.correct !== a.correct) return b.correct - a.correct;
+          if ((a.totalAttempts || a.total) !== (b.totalAttempts || b.total)) return (a.totalAttempts || a.total) - (b.totalAttempts || b.total);
           return a.totalTime - b.totalTime;
         });
       } else {
@@ -126,6 +127,7 @@ async function addToLeaderboard(entry) {
   leaderboard.push(entry);
   leaderboard.sort((a, b) => {
     if (b.correct !== a.correct) return b.correct - a.correct;
+    if ((a.totalAttempts || a.total) !== (b.totalAttempts || b.total)) return (a.totalAttempts || a.total) - (b.totalAttempts || b.total);
     return a.totalTime - b.totalTime;
   });
   leaderboard = leaderboard.slice(0, 50);
@@ -161,12 +163,15 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let attempts = 0;
+let totalAttempts = 0;
 let playerName = '';
 let questionTimer = null;
 let timeLeft = 0;
 let totalTimeUsed = 0;
 let questionStartTime = 0;
 const MAX_ATTEMPTS = 2;
+let isAdmin = false;
+const ADMIN_PASSWORD = '11qq11!';
 
 // ===== Screen Management =====
 function showScreen(screenId) {
@@ -236,6 +241,9 @@ function updateTimerDisplay() {
 function handleTimeUp() {
   playTimeUpSound();
   const q = currentQuestions[currentQuestionIndex];
+
+  // Count as an attempt (time expired counts as one failed attempt)
+  totalAttempts += 1;
 
   // Record full time as used
   totalTimeUsed += TIMER_SECONDS[currentDifficulty];
@@ -317,6 +325,7 @@ function startGame() {
   currentQuestionIndex = 0;
   score = 0;
   attempts = 0;
+  totalAttempts = 0;
   totalTimeUsed = 0;
 
   showScreen('question-screen');
@@ -420,6 +429,7 @@ function handleAnswer(selected, correct, btn, container) {
   playClickSound();
   attempts++;
 
+  totalAttempts += 1;
   if (selected === correct) {
     stopTimer();
     btn.classList.add('correct');
@@ -449,6 +459,7 @@ function handleAnswer(selected, correct, btn, container) {
 function handleImageAnswer(selected, correct, btn, container) {
   playClickSound();
   attempts++;
+  totalAttempts += 1;
 
   if (selected === correct) {
     stopTimer();
@@ -528,6 +539,7 @@ function showResults() {
 
   getElement('results-player-name').textContent = playerName;
   getElement('results-score').textContent = `${score} из ${total} правильных ответов`;
+  getElement('results-attempts').textContent = `Попыток: ${totalAttempts}`;
   getElement('results-time').textContent = `Время: ${formatTime(totalTimeUsed)}`;
 
   const starsContainer = getElement('stars-container');
@@ -576,6 +588,7 @@ function showResults() {
     difficultyLabel: diffData.label,
     correct: score,
     total: total,
+    totalAttempts: totalAttempts,
     totalTime: totalTimeUsed,
     date: new Date().toLocaleDateString('ru-RU')
   });
@@ -630,6 +643,8 @@ function renderLeaderboard(filterDifficulty = 'all') {
     const medal = i < 3 ? medals[i] : `<span class="lb-rank-num">${i + 1}</span>`;
     const diffIcons = { easy: '🐲', medium: '⚔️', hard: '👑' };
     const isCurrentPlayer = lastAddedId ? entry.id === lastAddedId : (entry.name === playerName && entry.correct === score && entry.totalTime === totalTimeUsed);
+    const attemptsText = entry.totalAttempts != null ? `${entry.totalAttempts} поп.` : '';
+    const deleteBtn = isAdmin && entry.id ? `<button class="lb-delete-btn" onclick="deleteLeaderboardEntry('${entry.id}')" title="Удалить">✕</button>` : '';
 
     return `
       <div class="lb-row ${isCurrentPlayer ? 'lb-row-current' : ''} ${i < 3 ? 'lb-row-top' : ''}">
@@ -640,8 +655,10 @@ function renderLeaderboard(filterDifficulty = 'all') {
         </div>
         <div class="lb-stats">
           <span class="lb-score">${entry.correct}/${entry.total}</span>
+          <span class="lb-attempts">${attemptsText}</span>
           <span class="lb-time">${formatTime(entry.totalTime)}</span>
         </div>
+        ${deleteBtn}
       </div>
     `;
   }).join('');
@@ -657,6 +674,61 @@ function escapeHtml(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
+}
+
+// ===== Admin Panel =====
+function toggleAdmin() {
+  playClickSound();
+  if (isAdmin) {
+    isAdmin = false;
+    getElement('admin-btn').textContent = '🔒 Админ';
+    getElement('admin-btn').classList.remove('admin-active');
+    getElement('admin-clear-btn').style.display = 'none';
+    renderLeaderboard();
+    return;
+  }
+  const pwd = prompt('Введите пароль администратора:');
+  if (pwd === ADMIN_PASSWORD) {
+    isAdmin = true;
+    getElement('admin-btn').textContent = '🔓 Выйти из админ';
+    getElement('admin-btn').classList.add('admin-active');
+    getElement('admin-clear-btn').style.display = 'inline-flex';
+    renderLeaderboard();
+  } else if (pwd !== null) {
+    alert('Неверный пароль!');
+  }
+}
+
+async function deleteLeaderboardEntry(id) {
+  if (!isAdmin) return;
+  if (!confirm('Удалить эту запись?')) return;
+  try {
+    const res = await fetch(`${FIREBASE_DB_URL}/scores/${id}.json`, { method: 'DELETE' });
+    if (res.ok) {
+      leaderboard = leaderboard.filter(e => e.id !== id);
+      renderLeaderboard();
+    } else {
+      alert('Ошибка при удалении');
+    }
+  } catch (e) {
+    alert('Ошибка сети');
+  }
+}
+
+async function clearAllLeaderboard() {
+  if (!isAdmin) return;
+  if (!confirm('Удалить ВСЕ записи из таблицы? Это нельзя отменить!')) return;
+  try {
+    const res = await fetch(`${FIREBASE_DB_URL}/scores.json`, { method: 'DELETE' });
+    if (res.ok) {
+      leaderboard = [];
+      renderLeaderboard();
+    } else {
+      alert('Ошибка при очистке');
+    }
+  } catch (e) {
+    alert('Ошибка сети');
+  }
 }
 
 // ===== Initialization =====

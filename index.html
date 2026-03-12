@@ -177,6 +177,7 @@
       <h2 id="results-title" class="results-title">Результаты</h2>
       <p id="results-player-name" class="results-player-name"></p>
       <p id="results-score" class="results-score"></p>
+      <p id="results-attempts" class="results-attempts"></p>
       <p id="results-time" class="results-time"></p>
       <div id="stars-container" class="stars-container"></div>
       <p id="results-message" class="results-message"></p>
@@ -213,6 +214,11 @@
       <p id="leaderboard-empty" class="lb-empty" style="display: none;">
         Пока никто не играл. Будь первым! 🐉
       </p>
+
+      <div class="lb-admin-bar">
+        <button id="admin-btn" class="lb-admin-btn" onclick="toggleAdmin()">🔒 Админ</button>
+        <button id="admin-clear-btn" class="lb-admin-clear-btn" onclick="clearAllLeaderboard()" style="display:none;">🗑 Очистить всё</button>
+      </div>
 
       <button class="btn-back-from-lb" onclick="goToTitle()">
         ← На главную
