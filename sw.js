@@ -3,7 +3,7 @@
  * Кэширует все ресурсы для офлайн-доступа
  */
 
-const CACHE_NAME = 'dragon-quiz-v7';
+const CACHE_NAME = 'dragon-quiz-v8';
 
 const ASSETS_TO_CACHE = [
   './',
