@@ -3,7 +3,7 @@
  * Кэширует все ресурсы для офлайн-доступа
  */
 
-const CACHE_NAME = 'dragon-quiz-v5';
+const CACHE_NAME = 'dragon-quiz-v6';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -15,17 +15,6 @@ const ASSETS_TO_CACHE = [
   './manifest.json',
   './assets/icon-192.png',
   './assets/icon-512.png',
-  './assets/title-bg.jpg',
-  './assets/hiccup.jpg',
-  './assets/toothless.jpg',
-  './assets/fishlegs.jpg',
-  './assets/camicazi.jpg',
-  './assets/stoick.jpg',
-  './assets/snotlout.jpg',
-  './assets/berk.jpg',
-  './assets/fireworm.jpg',
-  './assets/stormfly.jpg',
-  './assets/gobber.jpg',
   './assets/apple-touch-icon.png'
 ];
 
