@@ -136,10 +136,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Беззубика!',
         images: [
-          { src: 'assets/toothless.jpg', label: 'Беззубик' },
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' },
-          { src: 'assets/berk.jpg', label: 'Остров' }
+          { src: './assets/toothless.jpg', label: 'Беззубик' },
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/stormfly.jpg', label: 'Буримуха' },
+          { src: './assets/berk.jpg', label: 'Остров' }
         ],
         correct: 0
       },
@@ -147,10 +147,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Где живут викинги? Найди остров!',
         images: [
-          { src: 'assets/berk.jpg', label: 'Остров Олух' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/toothless.jpg', label: 'Беззубик' },
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' }
+          { src: './assets/berk.jpg', label: 'Остров Олух' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/toothless.jpg', label: 'Беззубик' },
+          { src: './assets/stormfly.jpg', label: 'Буримуха' }
         ],
         correct: 0
       },
@@ -158,10 +158,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Иккинга!',
         images: [
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' }
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/stoick.jpg', label: 'Стоик' }
         ],
         correct: 0
       },
@@ -169,10 +169,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди большого дракона! Кто дышит огнём?',
         images: [
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/berk.jpg', label: 'Остров' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' }
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/berk.jpg', label: 'Остров' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' }
         ],
         correct: 0
       },
@@ -180,10 +180,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Кто здесь папа Иккинга? Найди Стоика!',
         images: [
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/gobber.jpg', label: 'Плевака' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' }
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/gobber.jpg', label: 'Плевака' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' }
         ],
         correct: 0
       },
@@ -191,10 +191,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди разноцветного дракона!',
         images: [
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' },
-          { src: 'assets/toothless.jpg', label: 'Беззубик' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/berk.jpg', label: 'Остров' }
+          { src: './assets/stormfly.jpg', label: 'Буримуха' },
+          { src: './assets/toothless.jpg', label: 'Беззубик' },
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/berk.jpg', label: 'Остров' }
         ],
         correct: 0
       },
@@ -202,10 +202,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди мальчика, который дружит с Иккингом!',
         images: [
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/gobber.jpg', label: 'Плевака' }
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/gobber.jpg', label: 'Плевака' }
         ],
         correct: 0
       },
@@ -213,10 +213,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Кто здесь самый хвастливый мальчик?',
         images: [
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/camicazi.jpg', label: 'Камикадза' }
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/camicazi.jpg', label: 'Камикадза' }
         ],
         correct: 0
       },
@@ -224,10 +224,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди храбрую девочку!',
         images: [
-          { src: 'assets/camicazi.jpg', label: 'Камикадза' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' }
+          { src: './assets/camicazi.jpg', label: 'Камикадза' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' }
         ],
         correct: 0
       },
@@ -235,10 +235,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди учителя маленьких викингов!',
         images: [
-          { src: 'assets/gobber.jpg', label: 'Плевака' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/toothless.jpg', label: 'Беззубик' }
+          { src: './assets/gobber.jpg', label: 'Плевака' },
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/toothless.jpg', label: 'Беззубик' }
         ],
         correct: 0
       },
@@ -246,10 +246,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди маленького чёрного дракончика!',
         images: [
-          { src: 'assets/toothless.jpg', label: 'Беззубик' },
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' },
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/gobber.jpg', label: 'Плевака' }
+          { src: './assets/toothless.jpg', label: 'Беззубик' },
+          { src: './assets/stormfly.jpg', label: 'Буримуха' },
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/gobber.jpg', label: 'Плевака' }
         ],
         correct: 0
       },
@@ -257,10 +257,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Кто из них — дракон?',
         images: [
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/camicazi.jpg', label: 'Камикадза' }
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/camicazi.jpg', label: 'Камикадза' }
         ],
         correct: 0
       }
@@ -422,10 +422,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Камикадзу — храбрую девочку из племени Бой-баб!',
         images: [
-          { src: 'assets/camicazi.jpg', label: 'Камикадза' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/gobber.jpg', label: 'Плевака' }
+          { src: './assets/camicazi.jpg', label: 'Камикадза' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/gobber.jpg', label: 'Плевака' }
         ],
         correct: 0
       },
@@ -433,10 +433,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Стоика Обширного — вождя Лохматых Хулиганов!',
         images: [
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/gobber.jpg', label: 'Плевака' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' }
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/gobber.jpg', label: 'Плевака' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' }
         ],
         correct: 0
       },
@@ -444,10 +444,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Рыбьенога — самого худого мальчика в племени!',
         images: [
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' }
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/stoick.jpg', label: 'Стоик' }
         ],
         correct: 0
       },
@@ -455,10 +455,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Буримуху — дракониху, которая меняет цвет!',
         images: [
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' },
-          { src: 'assets/toothless.jpg', label: 'Беззубик' },
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/berk.jpg', label: 'Остров' }
+          { src: './assets/stormfly.jpg', label: 'Буримуха' },
+          { src: './assets/toothless.jpg', label: 'Беззубик' },
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/berk.jpg', label: 'Остров' }
         ],
         correct: 0
       },
@@ -466,10 +466,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Плеваку — грозного учителя викингов!',
         images: [
-          { src: 'assets/gobber.jpg', label: 'Плевака' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' }
+          { src: './assets/gobber.jpg', label: 'Плевака' },
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' }
         ],
         correct: 0
       },
@@ -477,10 +477,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Где остров Олух? Найди его!',
         images: [
-          { src: 'assets/berk.jpg', label: 'Остров Олух' },
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' },
-          { src: 'assets/toothless.jpg', label: 'Беззубик' }
+          { src: './assets/berk.jpg', label: 'Остров Олух' },
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/stormfly.jpg', label: 'Буримуха' },
+          { src: './assets/toothless.jpg', label: 'Беззубик' }
         ],
         correct: 0
       },
@@ -488,10 +488,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Сморкалу Мордоворота!',
         images: [
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/camicazi.jpg', label: 'Камикадза' }
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/camicazi.jpg', label: 'Камикадза' }
         ],
         correct: 0
       },
@@ -499,35 +499,35 @@ const QUESTIONS = {
       {
         type: 'image_text',
         question: 'Это дракон Огневица — Ужасное Чудовище. Чей это дракон?',
-        showImage: 'assets/fireworm.jpg',
+        showImage: './assets/fireworm.jpg',
         answers: ['Сморкалы', 'Иккинга', 'Рыбьенога', 'Камикадзы'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Смотри на этого персонажа. Кто это?',
-        showImage: 'assets/hiccup.jpg',
+        showImage: './assets/hiccup.jpg',
         answers: ['Иккинг', 'Сморкала', 'Рыбьеног', 'Стоик'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Посмотри на дракониху. Что она умеет?',
-        showImage: 'assets/stormfly.jpg',
+        showImage: './assets/stormfly.jpg',
         answers: ['Менять цвет', 'Дышать льдом', 'Становиться гигантской', 'Плавать под водой'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Этот большой викинг — вождь! Как его зовут?',
-        showImage: 'assets/stoick.jpg',
+        showImage: './assets/stoick.jpg',
         answers: ['Стоик', 'Плевака', 'Могадон', 'Элвин'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Этот мальчик — двоюродный брат Иккинга. Кто он?',
-        showImage: 'assets/snotlout.jpg',
+        showImage: './assets/snotlout.jpg',
         answers: ['Сморкала', 'Рыбьеног', 'Камикадза', 'Стоик'],
         correct: 0
       }
@@ -761,10 +761,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Плеваку Крикливого — учителя маленьких викингов!',
         images: [
-          { src: 'assets/gobber.jpg', label: 'Плевака' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' }
+          { src: './assets/gobber.jpg', label: 'Плевака' },
+          { src: './assets/stoick.jpg', label: 'Стоик' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' }
         ],
         correct: 0
       },
@@ -772,10 +772,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Сморкалу Мордоворота — хвастливого кузена Иккинга!',
         images: [
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/stoick.jpg', label: 'Стоик' }
+          { src: './assets/snotlout.jpg', label: 'Сморкала' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/stoick.jpg', label: 'Стоик' }
         ],
         correct: 0
       },
@@ -783,10 +783,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Огневицу — Ужасное Чудовище!',
         images: [
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/toothless.jpg', label: 'Беззубик' },
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' },
-          { src: 'assets/berk.jpg', label: 'Остров' }
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/toothless.jpg', label: 'Беззубик' },
+          { src: './assets/stormfly.jpg', label: 'Буримуха' },
+          { src: './assets/berk.jpg', label: 'Остров' }
         ],
         correct: 0
       },
@@ -794,10 +794,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Найди Камикадзу — лучшего вора среди Бой-баб!',
         images: [
-          { src: 'assets/camicazi.jpg', label: 'Камикадза' },
-          { src: 'assets/fishlegs.jpg', label: 'Рыбьеног' },
-          { src: 'assets/gobber.jpg', label: 'Плевака' },
-          { src: 'assets/snotlout.jpg', label: 'Сморкала' }
+          { src: './assets/camicazi.jpg', label: 'Камикадза' },
+          { src: './assets/fishlegs.jpg', label: 'Рыбьеног' },
+          { src: './assets/gobber.jpg', label: 'Плевака' },
+          { src: './assets/snotlout.jpg', label: 'Сморкала' }
         ],
         correct: 0
       },
@@ -805,10 +805,10 @@ const QUESTIONS = {
         type: 'image',
         question: 'Кто из них — дракон Моредраконус Гигантикус Максимус?',
         images: [
-          { src: 'assets/toothless.jpg', label: 'Беззубик' },
-          { src: 'assets/fireworm.jpg', label: 'Огневица' },
-          { src: 'assets/stormfly.jpg', label: 'Буримуха' },
-          { src: 'assets/hiccup.jpg', label: 'Иккинг' }
+          { src: './assets/toothless.jpg', label: 'Беззубик' },
+          { src: './assets/fireworm.jpg', label: 'Огневица' },
+          { src: './assets/stormfly.jpg', label: 'Буримуха' },
+          { src: './assets/hiccup.jpg', label: 'Иккинг' }
         ],
         correct: 0
       },
@@ -816,35 +816,35 @@ const QUESTIONS = {
       {
         type: 'image_text',
         question: 'Это дракониха Буримуха. Что она умеет?',
-        showImage: 'assets/stormfly.jpg',
+        showImage: './assets/stormfly.jpg',
         answers: ['Менять цвет', 'Дышать льдом', 'Становиться гигантской', 'Читать мысли'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Это Рыбьеног. Какой у него дракон?',
-        showImage: 'assets/fishlegs.jpg',
+        showImage: './assets/fishlegs.jpg',
         answers: ['Жутьздорова', 'Беззубик', 'Огневица', 'Буримуха'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Это Стоик. Кем он является в племени?',
-        showImage: 'assets/stoick.jpg',
+        showImage: './assets/stoick.jpg',
         answers: ['Вождём', 'Учителем', 'Кузнецом', 'Лекарем'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Это Камикадза. К какому племени она принадлежит?',
-        showImage: 'assets/camicazi.jpg',
+        showImage: './assets/camicazi.jpg',
         answers: ['Бой-бабы', 'Лохматые Хулиганы', 'Остолопы', 'Отщепенцы'],
         correct: 0
       },
       {
         type: 'image_text',
         question: 'Это Плевака. Кем он работает?',
-        showImage: 'assets/gobber.jpg',
+        showImage: './assets/gobber.jpg',
         answers: ['Учителем новобранцев', 'Вождём', 'Кузнецом', 'Лекарем'],
         correct: 0
       }

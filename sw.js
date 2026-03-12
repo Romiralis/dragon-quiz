@@ -3,7 +3,7 @@
  * Кэширует все ресурсы для офлайн-доступа
  */
 
-const CACHE_NAME = 'dragon-quiz-v4';
+const CACHE_NAME = 'dragon-quiz-v5';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -25,7 +25,8 @@ const ASSETS_TO_CACHE = [
   './assets/berk.jpg',
   './assets/fireworm.jpg',
   './assets/stormfly.jpg',
-  './assets/gobber.jpg'
+  './assets/gobber.jpg',
+  './assets/apple-touch-icon.png'
 ];
 
 // Install — precache all assets

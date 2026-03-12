@@ -96,7 +96,7 @@ function formatTime(seconds) {
 
 // ===== Cloud Leaderboard (Firebase Realtime Database) =====
 // ЗАМЕНИТЕ ЭТУ СТРОКУ на URL вашей Firebase базы данных:
-const FIREBASE_DB_URL = 'https://how-to-train-a-dragon-afaed-default-rtdb.europe-west1.firebasedatabase.app/';
+const FIREBASE_DB_URL = 'https://how-to-train-a-dragon-afaed-default-rtdb.europe-west1.firebasedatabase.app';
 let leaderboard = [];
 let lastAddedId = null;
 
